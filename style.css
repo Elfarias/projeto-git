@@ -1,42 +1,334 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root{
+
+    --bg:#ffffff;
+    --surface:#ffffff;
+    --text:#111827;
+    --secondary:#64748b;
+    --border:#e5e7eb;
+    --accent:#2563eb;
+
 }
 
-/* Estilo da página */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    text-align: center;
-    padding: 50px;
+body.dark{
+
+    --bg:#0f172a;
+    --surface:#1e293b;
+    --text:#f8fafc;
+    --secondary:#94a3b8;
+    --border:#334155;
+    --accent:#3b82f6;
+
 }
 
-/* Título */
-h1 {
-    color: #0078d7;
-    margin-bottom: 20px;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* Parágrafo */
-p {
-    margin-bottom: 20px;
-    font-size: 18px;
+html{
+    scroll-behavior:smooth;
 }
 
-/* Botão */
-button {
-    background-color: #0078d7;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:var(--bg);
+    color:var(--text);
+
 }
 
-button:hover {
-    background-color: #005fa3;
+/* Progress */
+
+#progress-bar{
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    height:4px;
+
+    width:0;
+
+    background:var(--accent);
+
+    z-index:9999;
+}
+
+/* Header */
+
+.topbar{
+
+    height:70px;
+
+    position:fixed;
+
+    top:0;
+    right:0;
+    left:0;
+
+    background:var(--surface);
+
+    border-bottom:1px solid var(--border);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 20px;
+
+    z-index:1000;
+
+}
+
+.icon-btn{
+
+    border:none;
+
+    background:none;
+
+    font-size:1.4rem;
+
+    cursor:pointer;
+
+}
+
+/* Sidebar */
+
+.sidebar{
+
+    width:270px;
+
+    position:fixed;
+
+    top:70px;
+
+    bottom:0;
+
+    left:0;
+
+    background:var(--surface);
+
+    border-right:1px solid var(--border);
+
+    padding:25px;
+
+    transition:.3s;
+
+}
+
+.sidebar h2{
+    margin-bottom:20px;
+}
+
+.sidebar nav{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+.sidebar a{
+
+    text-decoration:none;
+
+    color:var(--secondary);
+
+    padding:10px;
+
+    border-radius:8px;
+
+}
+
+.sidebar a:hover{
+
+    background:rgba(37,99,235,.1);
+
+    color:var(--accent);
+
+}
+
+/* Main */
+
+main{
+
+    max-width:1000px;
+
+    margin-left:270px;
+
+    padding:120px 60px;
+
+}
+
+/* Hero */
+
+.hero{
+
+    margin-bottom:60px;
+
+}
+
+.badge{
+
+    background:rgba(37,99,235,.1);
+
+    color:var(--accent);
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+}
+
+.hero h1{
+
+    margin-top:20px;
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+}
+
+.hero p{
+
+    margin-top:20px;
+
+    color:var(--secondary);
+
+    line-height:1.8;
+
+}
+
+/* Sections */
+
+section{
+
+    margin-bottom:70px;
+
+}
+
+h2{
+
+    margin-bottom:20px;
+
+}
+
+/* Callout */
+
+.callout{
+
+    margin-top:20px;
+
+    background:rgba(37,99,235,.08);
+
+    border-left:5px solid var(--accent);
+
+    padding:20px;
+
+    border-radius:10px;
+
+}
+
+/* Cards */
+
+.card{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    padding:20px;
+
+    border-radius:14px;
+
+    margin-bottom:15px;
+
+}
+
+/* Workflow */
+
+.workflow{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    align-items:center;
+
+}
+
+.step{
+
+    padding:15px 20px;
+
+    border-radius:12px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+}
+
+.arrow{
+
+    font-size:1.3rem;
+
+    color:var(--accent);
+
+}
+
+/* Code */
+
+pre{
+
+    background:#111827;
+
+    color:#22c55e;
+
+    padding:20px;
+
+    border-radius:14px;
+
+    overflow:auto;
+
+}
+
+/* Mobile */
+
+#menuBtn{
+    display:none;
+}
+
+@media(max-width:900px){
+
+    #menuBtn{
+        display:block;
+    }
+
+    .sidebar{
+
+        left:-280px;
+    }
+
+    .sidebar.open{
+        left:0;
+    }
+
+    main{
+
+        margin-left:0;
+
+        padding:110px 25px;
+    }
+
+    .hero h1{
+        font-size:2.6rem;
+    }
+
 }
