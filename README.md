@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \# Projeto Git
 
 
@@ -186,3 +187,6 @@ Projeto desenvolvido para fins de estudo e prática de Git e GitHub.
 
 
 
+=======
+# projeto-git
+>>>>>>> 20a921f94c790b09c8648f4d7817e20356a68ab1
