@@ -1,22 +1,214 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Projeto Git</title>
+
+    <title>Projeto Git | Guia de Estudos</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
 </head>
+
 <body>
-    <h1>Olá, Git!</h1>
-    <p>Este é meu primeiro projeto versionado com Git.</p>
 
-    <button onclick="mostrarMensagem()">
-        Clique aqui
-    </button>
+    <div id="progress-bar"></div>
 
-    <script>
-        function mostrarMensagem() {
-            alert("Git e GitHub são ótimos para controle de versão!");
-        }
-    </script>
+    <header class="topbar">
+
+        <button id="menuBtn" class="icon-btn">
+            ☰
+        </button>
+
+        <h1>📚 Projeto Git</h1>
+
+        <button id="themeBtn"
+            class="icon-btn">
+            🌙
+        </button>
+
+    </header>
+
+    <aside class="sidebar">
+
+        <h2>Guia Git</h2>
+
+        <nav>
+
+            <a href="#intro">Introdução</a>
+            <a href="#git">Git</a>
+            <a href="#github">GitHub</a>
+            <a href="#workflow">Workflow</a>
+            <a href="#comandos">Comandos</a>
+            <a href="#branches">Branches</a>
+            <a href="#merge">Merge</a>
+
+        </nav>
+
+    </aside>
+
+    <main>
+
+        <section class="hero">
+
+            <span class="badge">
+                Controle de Versão
+            </span>
+
+            <h1>
+                Git e GitHub<br>
+                do Zero ao Avançado
+            </h1>
+
+            <p>
+                Este projeto foi criado para consolidar
+                conhecimentos sobre controle de versão,
+                GitHub, colaboração e boas práticas
+                utilizadas por desenvolvedores profissionais.
+            </p>
+
+        </section>
+
+        <section id="intro">
+
+            <h2>Introdução</h2>
+
+            <p>
+                Git é um sistema de controle de versão
+                distribuído utilizado por milhões
+                de desenvolvedores.
+            </p>
+
+            <div class="callout">
+                💡 Aprender Git é uma habilidade
+                obrigatória para desenvolvimento moderno.
+            </div>
+
+        </section>
+
+        <section id="git">
+
+            <h2>O que é Git?</h2>
+
+            <p>
+                Git permite rastrear alterações em arquivos,
+                colaborar em equipe e recuperar versões
+                anteriores do projeto.
+            </p>
+
+        </section>
+
+        <section id="github">
+
+            <h2>O que é GitHub?</h2>
+
+            <p>
+                Plataforma de hospedagem de repositórios Git.
+            </p>
+
+        </section>
+
+        <section id="workflow">
+
+            <h2>Fluxo Git</h2>
+
+            <div class="workflow">
+
+                <div class="step">
+                    Working Directory
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step">
+                    Staging Area
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step">
+                    Repository
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step">
+                    GitHub
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="comandos">
+
+            <h2>Comandos Essenciais</h2>
+
+            <div class="card">
+                <h3>git init</h3>
+                <p>Cria um novo repositório Git.</p>
+            </div>
+
+            <div class="card">
+                <h3>git status</h3>
+                <p>Mostra o estado atual do repositório.</p>
+            </div>
+
+            <div class="card">
+                <h3>git add .</h3>
+                <p>Adiciona arquivos ao Stage.</p>
+            </div>
+
+            <div class="card">
+                <h3>git commit</h3>
+                <p>Cria um snapshot do projeto.</p>
+            </div>
+
+            <div class="card">
+                <h3>git push</h3>
+                <p>Envia alterações ao GitHub.</p>
+            </div>
+
+        </section>
+
+        <section id="branches">
+
+            <h2>Branches</h2>
+
+<pre>
+git branch feature-login
+
+git checkout feature-login
+</pre>
+
+        </section>
+
+        <section id="merge">
+
+            <h2>Merge</h2>
+
+<pre>
+git checkout main
+
+git merge feature-login
+</pre>
+
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
 </body>
 </html>
