@@ -1,192 +1,85 @@
-<<<<<<< HEAD
-\# Projeto Git
-
-
-
+🚀 Projeto Git
 Projeto criado com o objetivo de estudar e praticar Git e GitHub.
 
-
-
-\## 📚 Sobre o Projeto
-
-
-
+📚 Sobre o Projeto
 Este repositório faz parte dos meus estudos sobre controle de versão utilizando Git e hospedagem de código com GitHub.
-
-
 
 Durante o desenvolvimento deste projeto, estou praticando conceitos fundamentais como:
 
+Inicialização de repositórios
 
+Commits
 
-\- Inicialização de repositórios
+Branches
 
-\- Commits
+Merge
 
-\- Branches
+Push e Pull
 
-\- Merge
+Clone de repositórios
 
-\- Push e Pull
+Versionamento de código
 
-\- Clone de repositórios
+Resolução de conflitos
 
-\- Versionamento de código
+Pull Requests
 
-\- Resolução de conflitos
+Boas práticas de documentação
 
-\- Pull Requests
+🚀 Tecnologias Utilizadas
+Git / GitHub
 
-\- Boas práticas de documentação
+HTML5
 
+CSS3
 
-
-\## 🚀 Tecnologias Utilizadas
-
-
-
-\- HTML5
-
-\- CSS3
-
-\- Git
-
-\- GitHub
-
-
-
-\## 📂 Estrutura do Projeto
-
-
-
-```text
-
+📂 Estrutura do Projeto
+Plaintext
 projeto-git/
-
 │
-
 ├── index.html
-
 ├── style.css
-
 └── README.md
-
-```
-
-
-
-\## 🎯 Objetivo
-
-
-
+🎯 Objetivo
 Aprender na prática o funcionamento do Git e GitHub através da criação e evolução deste projeto.
 
-
-
-\## 🛠️ Comandos Git Utilizados
-
-
-
+🛠️ Comandos Git Utilizados
 Inicializar repositório:
 
-
-
-```bash
-
+Bash
 git init
-
-```
-
-
-
 Adicionar arquivos:
 
-
-
-```bash
-
+Bash
 git add .
-
-```
-
-
-
 Criar commit:
 
-
-
-```bash
-
+Bash
 git commit -m "Primeiro commit"
-
-```
-
-
-
 Conectar ao GitHub:
 
-
-
-```bash
-
-git remote add origin URL\_DO\_REPOSITORIO
-
-```
-
-
-
+Bash
+git remote add origin URL_DO_REPOSITORIO
 Enviar código:
 
-
-
-```bash
-
+Bash
 git push -u origin main
-
-```
-
-
-
 Ver histórico:
 
-
-
-```bash
-
+Bash
 git log --oneline
-
-```
-
-
-
-\## 📖 Aprendizados
-
-
-
+📖 Aprendizados
 Neste projeto estou desenvolvendo conhecimentos em:
 
+Controle de versão
 
+Colaboração em projetos
 
-\- Controle de versão
+Fluxo de trabalho Git
 
-\- Colaboração em projetos
+Hospedagem de código no GitHub
 
-\- Fluxo de trabalho Git
+Organização de projetos
 
-\- Hospedagem de código no GitHub
-
-\- Organização de projetos
-
-
-
-\## 👨‍💻 Autor
-
-
-
+👨‍💻 Autor
 Projeto desenvolvido para fins de estudo e prática de Git e GitHub.
-
-
-
-=======
-# projeto-git
->>>>>>> 20a921f94c790b09c8648f4d7817e20356a68ab1
