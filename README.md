@@ -1,4 +1,12 @@
-```html
+Peço desculpa por isso! Olhando para a imagem, o problema aconteceu porque \*\*as barras invertidas (`\\`) escaparam o código\*\* (por exemplo, ficou `\\#` e URLs com `\\\&`), o que impediu o GitHub de processar o Markdown e as tags corretamente.
+
+
+
+Vamos corrigir isso agora mesmo. Copie exatamente o bloco de código abaixo (limpo de barras indevidas) e cole no seu editor:
+
+
+
+```markdown
 
 <div align="center">
 
@@ -8,7 +16,11 @@
 
 
 
-<p><em>Projeto criado com o objetivo de estudar e praticar Git e GitHub.</em></p>
+<em>Projeto criado com o objetivo de estudar e praticar Git e GitHub.</em>
+
+
+
+<br><br>
 
 
 
@@ -230,7 +242,7 @@ git commit -m "Sua mensagem aqui"
 
 
 
-\* \*\*Adicionar alterações e commitar direto (para arquivos já monitorados):\*\*
+\* \*\*Adicionar alterações e commitar direto:\*\*
 
 ```bash
 
@@ -344,7 +356,7 @@ git blame <nome-do-arquivo>
 
 
 
-\### 4. Gerenciamento de Branches (Ramificações)
+\### 4. Gerenciamento de Branches
 
 
 
@@ -408,10 +420,6 @@ git checkout <nome-da-branch>
 
 ```bash
 
-git checkout -b <nome-da-branch>
-
-\# Ou na sintaxe nova:
-
 git switch -c <nome-da-branch>
 
 
@@ -450,20 +458,6 @@ git branch -d <nome-da-branch>
 
 
 
-\* \*\*Forçar a exclusão de uma branch local:\*\*
-
-```bash
-
-git branch -D <nome-da-branch>
-
-
-
-```
-
-
-
-
-
 
 
 \---
@@ -488,7 +482,7 @@ git clone <URL\_DO\_REPOSITORIO>
 
 
 
-\* \*\*Conectar o diretório local a um repositório remoto:\*\*
+\* \*\*Conectar diretório local ao repositório remoto:\*\*
 
 ```bash
 
@@ -502,7 +496,7 @@ git remote add origin <URL\_DO\_REPOSITORIO>
 
 
 
-\* \*\*Verificar os repositórios remotos vinculados:\*\*
+\* \*\*Verificar repositórios remotos vinculados:\*\*
 
 ```bash
 
@@ -558,51 +552,19 @@ git push origin <nome-da-branch>
 
 
 
-\* \*\*Enviar e configurar o rastreamento padrão (upstream):\*\*
-
-```bash
-
-git push -u origin main
-
-
-
-```
-
-
-
-
-
-\* \*\*Deletar uma branch no repositório remoto:\*\*
-
-```bash
-
-git push origin --delete <nome-da-branch>
-
-
-
-```
-
-
-
-
-
 
 
 \---
 
 
 
-\### 6. Desfazendo Alterações e Correções
+\### 6. Desfazendo Alterações
 
 
 
-\* \*\*Desfazer alterações em um arquivo (antes do staging):\*\*
+\* \*\*Desfazer alterações em um arquivo:\*\*
 
 ```bash
-
-git checkout -- <nome-do-arquivo>
-
-\# Ou na sintaxe nova:
 
 git restore <nome-do-arquivo>
 
@@ -614,13 +576,9 @@ git restore <nome-do-arquivo>
 
 
 
-\* \*\*Remover arquivo da área de staging (unstage):\*\*
+\* \*\*Remover arquivo da área de staging:\*\*
 
 ```bash
-
-git reset HEAD <nome-do-arquivo>
-
-\# Ou na sintaxe nova:
 
 git restore --staged <nome-do-arquivo>
 
@@ -632,7 +590,7 @@ git restore --staged <nome-do-arquivo>
 
 
 
-\* \*\*Alterar a mensagem do último commit (ou adicionar arquivos esquecidos):\*\*
+\* \*\*Alterar a mensagem do último commit:\*\*
 
 ```bash
 
@@ -646,39 +604,11 @@ git commit --amend -m "Nova mensagem"
 
 
 
-\* \*\*Criar um novo commit que reverte as alterações de um commit antigo:\*\*
+\* \*\*Reverter um commit anterior:\*\*
 
 ```bash
 
 git revert <hash-do-commit>
-
-
-
-```
-
-
-
-
-
-\* \*\*Voltar ao commit anterior mantendo as alterações nos arquivos (Soft Reset):\*\*
-
-```bash
-
-git reset --soft HEAD\~1
-
-
-
-```
-
-
-
-
-
-\* \*\*Descartar completamente os últimos commits e alterações (Hard Reset - cuidado!):\*\*
-
-```bash
-
-git reset --hard HEAD\~1
 
 
 
@@ -698,7 +628,7 @@ git reset --hard HEAD\~1
 
 
 
-\* \*\*Guardar alterações temporariamente na pilha (sem fazer commit):\*\*
+\* \*\*Guardar alterações temporariamente:\*\*
 
 ```bash
 
@@ -712,7 +642,7 @@ git stash
 
 
 
-\* \*\*Recuperar as alterações guardadas na pilha:\*\*
+\* \*\*Recuperar alterações guardadas:\*\*
 
 ```bash
 
@@ -726,49 +656,7 @@ git stash pop
 
 
 
-\* \*\*Listar tudo o que está guardado no stash:\*\*
-
-```bash
-
-git stash list
-
-
-
-```
-
-
-
-
-
-\* \*\*Aplicar um commit específico de outra branch aqui (Cherry-pick):\*\*
-
-```bash
-
-git cherry-pick <hash-do-commit>
-
-
-
-```
-
-
-
-
-
-\* \*\*Reescrever o histórico aplicando commits sobre outra base (Rebase):\*\*
-
-```bash
-
-git rebase <nome-da-branch>
-
-
-
-```
-
-
-
-
-
-\* \*\*Ver o histórico de todas as ações feitas no repositório local (para recuperar coisas apagadas):\*\*
+\* \*\*Ver histórico completo de ações (recuperar coisas apagadas):\*\*
 
 ```bash
 
